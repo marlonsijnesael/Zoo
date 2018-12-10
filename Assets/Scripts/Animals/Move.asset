@@ -9,11 +9,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Mover2
+  m_Name: Move
   m_EditorClassIdentifier: Assembly-CSharp::Action_move
-  left: 5
-  right: -5
-  top: 4
-  bottum: -4
-  speed: 2
-  goal: {x: 0, y: -1, z: 0}

@@ -1,9 +1,16 @@
-﻿
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
-
 
 public class Animal : MonoBehaviour {
+    //screen bounds
+    [HideInInspector]
+    public int left = -5;
+    [HideInInspector]
+    public int right = 5;
+    [HideInInspector]
+    public int top = 5;
+    [HideInInspector]
+    public int down = -5;
 
     [Header("Animal Info")]
     public string animalName;
@@ -12,25 +19,32 @@ public class Animal : MonoBehaviour {
     public enum AnimalType { Carnivore, Herbivore };
 
     [Header("Animal Settings")]
-    public int left;
-    public int right;
-    public int top;
-    public int down;
-
     public float speed;
     public Vector3 goal;
-  
+
     [Header("Animal Behaviour")]
     public AnimalAction[] actions;
     public Trick[] tricks;
+    public string helloText;
+    public string thanksText;
 
     [Header("Animal UI Components")]
     public Sprite sprite;
-    public GameObject Balloon;
-    public Text text;
+    public GameObject balloon;
+    public GameObject textObject;
 
+    private TextMesh textMesh;
+    private SpriteRenderer sprRend;
+
+    
     private void Start() {
         this.gameObject.tag = eatingType.ToString();
+
+        sprRend = gameObject.AddComponent<SpriteRenderer>();
+        sprRend.sprite = sprite;
+
+        //textMesh = textObject.GetComponent<TextMeshPro>();
+        balloon.SetActive(false);
         }
 
     private void Update() {
@@ -46,6 +60,22 @@ public class Animal : MonoBehaviour {
         foreach (Trick _trick in tricks) {
             _trick.DoTrick();
             }
+        }
+
+    public void FeedMe() {
+        //textMesh.
+        StartCoroutine(ActivateUI(balloon));
+        }
+
+    public void SayHello() {
+       // textMesh.text = helloText;
+        StartCoroutine(ActivateUI(balloon));
+        }
+
+    public IEnumerator ActivateUI(GameObject _UI) {
+        _UI.SetActive(true);
+        yield return new WaitForSeconds(1.0f);
+        _UI.SetActive(false);
         }
 
     }
