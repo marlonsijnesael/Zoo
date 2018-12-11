@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu(menuName = "Animals/Actions/move")]
-public class Action_move : AnimalAction {
+public class Action_Move : AnimalAction {
 
 
     public override void Init(Animal _o) {

@@ -147,13 +147,15 @@ MonoBehaviour:
   right: -5
   top: 5
   down: -5
-  animalName: Lion
+  animalName: leo
+  animalType: lion
   eatingType: 0
   speed: 2
   goal: {x: 0, y: 0, z: 0}
   actions:
-  - {fileID: 11400000, guid: 72929711aa12e7c4fb926619fa5b94e6, type: 2}
-  tricks: []
+  - {fileID: 11400000, guid: dfb494090d9b6094b960bf86c8b43181, type: 2}
+  tricks:
+  - {fileID: 11400000, guid: 61de87943beeab048b485be8f148af82, type: 2}
   helloText: hello greetings from lion
   thanksText: thanks boy
   sprite: {fileID: 21300000, guid: 97de651b3407c744ca12bb3fbca15f1f, type: 3}

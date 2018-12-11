@@ -14,9 +14,10 @@ public class Animal : MonoBehaviour {
 
     [Header("Animal Info")]
     public string animalName;
+    public string animalType;
 
     public AnimalType eatingType;
-    public enum AnimalType { Carnivore, Herbivore };
+    public enum AnimalType { Carnivore, Herbivore, Omnivore };
 
     [Header("Animal Settings")]
     public float speed;
@@ -52,13 +53,21 @@ public class Animal : MonoBehaviour {
         }
 
     public void DoAction() {
+        if (actions.Length == 0)
+        {
+            return;
+        }
         foreach (AnimalAction _action in actions)
             _action.DoAction(this);
         }
 
     public void DoTrick() {
+        if (tricks.Length == 0)
+        {
+            return;
+        }
         foreach (Trick _trick in tricks) {
-            _trick.DoTrick();
+            StartCoroutine(_trick.DoTrick(this));
             }
         }
 

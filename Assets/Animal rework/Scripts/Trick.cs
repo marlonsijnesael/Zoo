@@ -4,5 +4,7 @@ using UnityEngine;
 
 public abstract class Trick : ScriptableObject {
 
-    public abstract void DoTrick();
+    public abstract IEnumerator DoTrick(Animal _o);
+
+   
 }

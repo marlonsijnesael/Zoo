@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class GameManager : MonoBehaviour {
 
     public static GameManager _Instance;
@@ -17,9 +18,20 @@ public class GameManager : MonoBehaviour {
             }
         }
 
+   public void PerfomTricks()
+    {
+        foreach (Animal _animal in animalList)
+        {
+            if (_animal.tricks.Length > 0)
+            {
+                _animal.DoTrick();
+            }
+        }
+    }
+
     public void FeedAnimals(string _tag) {
         foreach (Animal _animal in animalList) {
-            if (_animal.tag == _tag) {
+            if (_animal.tag == _tag || _animal.tag == "Omnivore") {
                 _animal.FeedMe();
                 }
             }
