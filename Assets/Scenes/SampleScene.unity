@@ -1186,6 +1186,7 @@ MonoBehaviour:
   animals:
   - {fileID: 1640074652630352, guid: 00db9c52b95b1d34e8be49912ae1097a, type: 2}
   - {fileID: 1324200976350950, guid: 32ce6cbbe41d1a7418c5c4666ed50f74, type: 2}
+  - {fileID: 1795253321680608, guid: 9bafb11a12a263d46b6c7c1547ac43bf, type: 2}
 --- !u!4 &1993174040
 Transform:
   m_ObjectHideFlags: 0

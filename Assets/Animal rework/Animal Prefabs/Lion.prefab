@@ -161,6 +161,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 97de651b3407c744ca12bb3fbca15f1f, type: 3}
   balloon: {fileID: 1978639928421146}
   textObject: {fileID: 1848634840060574}
+  textMesh: {fileID: 114575854885648496}
 --- !u!114 &114575854885648496
 MonoBehaviour:
   m_ObjectHideFlags: 1

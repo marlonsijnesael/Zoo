@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
+using TMPro;
 
 public class Animal : MonoBehaviour {
     //screen bounds
+    
+    #region bounds
     [HideInInspector]
     public int left = -5;
     [HideInInspector]
@@ -11,6 +14,8 @@ public class Animal : MonoBehaviour {
     public int top = 5;
     [HideInInspector]
     public int down = -5;
+
+    #endregion
 
     [Header("Animal Info")]
     public string animalName;
@@ -33,10 +38,9 @@ public class Animal : MonoBehaviour {
     public Sprite sprite;
     public GameObject balloon;
     public GameObject textObject;
-
-    private TextMesh textMesh;
+    private TextMeshPro textMesh;
     private SpriteRenderer sprRend;
-
+    private bool DoingTrick = false;
     
     private void Start() {
         this.gameObject.tag = eatingType.ToString();
@@ -44,12 +48,13 @@ public class Animal : MonoBehaviour {
         sprRend = gameObject.AddComponent<SpriteRenderer>();
         sprRend.sprite = sprite;
 
-        //textMesh = textObject.GetComponent<TextMeshPro>();
+        textMesh = textObject.GetComponent<TextMeshPro>();
         balloon.SetActive(false);
         }
 
     private void Update() {
-        DoAction();
+        if (!DoingTrick)
+            DoAction();
         }
 
     public void DoAction() {
@@ -58,7 +63,10 @@ public class Animal : MonoBehaviour {
             return;
         }
         foreach (AnimalAction _action in actions)
+        {
             _action.DoAction(this);
+        }
+        
         }
 
     public void DoTrick() {
@@ -72,12 +80,12 @@ public class Animal : MonoBehaviour {
         }
 
     public void FeedMe() {
-        //textMesh.
+        textMesh.SetText( thanksText);
         StartCoroutine(ActivateUI(balloon));
         }
 
     public void SayHello() {
-       // textMesh.text = helloText;
+        textMesh.SetText(helloText);
         StartCoroutine(ActivateUI(balloon));
         }
 
