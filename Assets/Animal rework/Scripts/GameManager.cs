@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+/// <summary>
+/// script to keep trak of all the animals, and handle the zoo control input
+/// </summary>
 public class GameManager : MonoBehaviour {
 
     public static GameManager _Instance;
@@ -18,16 +22,13 @@ public class GameManager : MonoBehaviour {
             }
         }
 
-   public void PerfomTricks()
-    {
-        foreach (Animal _animal in animalList)
-        {
-            if (_animal.tricks.Length > 0)
-            {
+    public void PerfomTricks() {
+        foreach (Animal _animal in animalList) {
+            if (_animal.animalInfo.tricks.Length > 0) {
                 _animal.DoTrick();
+                }
             }
         }
-    }
 
     public void FeedAnimals(string _tag) {
         foreach (Animal _animal in animalList) {
@@ -39,7 +40,7 @@ public class GameManager : MonoBehaviour {
 
     public Animal CheckListForName(string _name) {
         foreach (Animal _animal in animalList) {
-            if (_animal.animalName == _name) {
+            if (_animal.animalInfo.animalName == _name) {
                 return _animal;
                 }
             }

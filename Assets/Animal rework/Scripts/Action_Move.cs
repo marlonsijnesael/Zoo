@@ -14,14 +14,14 @@ public class Action_Move : AnimalAction {
         }
 
     public void Move(Animal _o) {
-        Vector3 direction = _o.goal - _o.gameObject.transform.localPosition;
-        _o.gameObject.transform.Translate(direction.normalized * _o.speed * Time.deltaTime);
+        Vector3 direction = _o.animalInfo.goal - _o.gameObject.transform.localPosition;
+        _o.gameObject.transform.Translate(direction.normalized * _o.animalInfo.speed * Time.deltaTime);
         if (direction.magnitude < 0.05)
             PickGoal(_o);
         }
 
     private void PickGoal(Animal _o) {
-        _o.goal = new Vector2(
+        _o.animalInfo.goal = new Vector2(
         Random.Range(_o.left, _o.right),
         Random.Range(_o.down, _o.top));
         }

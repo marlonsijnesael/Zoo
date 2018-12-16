@@ -7,7 +7,7 @@ public class AnimalObject : MonoBehaviour {
     public Animal animal;
 
     private void Start() {
-        this.gameObject.tag = animal.eatingType.ToString();
+     
         }
 
     private void Update() {

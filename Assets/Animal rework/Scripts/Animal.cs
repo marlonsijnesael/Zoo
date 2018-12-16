@@ -2,9 +2,12 @@
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// Baseclass for every Enemey
+/// </summary>
 public class Animal : MonoBehaviour {
-    //screen bounds
     
+    //bounds for random walk
     #region bounds
     [HideInInspector]
     public int left = -5;
@@ -17,22 +20,6 @@ public class Animal : MonoBehaviour {
 
     #endregion
 
-    [Header("Animal Info")]
-    public string animalName;
-    public string animalType;
-
-    public AnimalType eatingType;
-    public enum AnimalType { Carnivore, Herbivore, Omnivore };
-
-    [Header("Animal Settings")]
-    public float speed;
-    public Vector3 goal;
-
-    [Header("Animal Behaviour")]
-    public AnimalAction[] actions;
-    public Trick[] tricks;
-    public string helloText;
-    public string thanksText;
 
     [Header("Animal UI Components")]
     public Sprite sprite;
@@ -40,10 +27,13 @@ public class Animal : MonoBehaviour {
     public GameObject textObject;
     private TextMeshPro textMesh;
     private SpriteRenderer sprRend;
-    private bool DoingTrick = false;
+    private bool doingTrick = false;
+
     
+    public ScriptableAnimal animalInfo;
+
     private void Start() {
-        this.gameObject.tag = eatingType.ToString();
+        this.gameObject.tag = animalInfo.eatingType.ToString();
 
         sprRend = gameObject.AddComponent<SpriteRenderer>();
         sprRend.sprite = sprite;
@@ -53,39 +43,37 @@ public class Animal : MonoBehaviour {
         }
 
     private void Update() {
-        if (!DoingTrick)
+        if (!doingTrick)
             DoAction();
         }
 
+
+
     public void DoAction() {
-        if (actions.Length == 0)
-        {
+        if (animalInfo.actions.Length == 0) {
             return;
-        }
-        foreach (AnimalAction _action in actions)
-        {
+            }
+        foreach (AnimalAction _action in animalInfo.actions) {
             _action.DoAction(this);
-        }
-        
+            }
         }
 
     public void DoTrick() {
-        if (tricks.Length == 0)
-        {
+        if (animalInfo.tricks.Length == 0) {
             return;
-        }
-        foreach (Trick _trick in tricks) {
+            }
+        foreach (Trick _trick in animalInfo.tricks) {
             StartCoroutine(_trick.DoTrick(this));
             }
         }
 
     public void FeedMe() {
-        textMesh.SetText( thanksText);
+        textMesh.SetText(animalInfo.thanksText);
         StartCoroutine(ActivateUI(balloon));
         }
 
     public void SayHello() {
-        textMesh.SetText(helloText);
+        textMesh.SetText(animalInfo.helloText);
         StartCoroutine(ActivateUI(balloon));
         }
 

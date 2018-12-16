@@ -9,36 +9,20 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1640074652630352}
+  m_RootGameObject: {fileID: 1634326058628352}
   m_IsPrefabAsset: 1
---- !u!1 &1640074652630352
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4291505777615304}
-  - component: {fileID: 114508224719264630}
-  m_Layer: 0
-  m_Name: Lion
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1848634840060574
+--- !u!1 &1111353611851954
 GameObject:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 224266053922886436}
-  - component: {fileID: 33533633624263696}
-  - component: {fileID: 23094351923811732}
-  - component: {fileID: 222541599453747754}
-  - component: {fileID: 114575854885648496}
+  - component: {fileID: 224365418925506622}
+  - component: {fileID: 33070730003192792}
+  - component: {fileID: 23067150519358086}
+  - component: {fileID: 222890462945959498}
+  - component: {fileID: 114321386919197828}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -46,15 +30,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1978639928421146
+--- !u!1 &1291373278517848
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4312379419846562}
-  - component: {fileID: 212556043393190510}
+  - component: {fileID: 4336962853011776}
+  - component: {fileID: 212023711284397914}
   m_Layer: 0
   m_Name: Balloon
   m_TagString: Untagged
@@ -62,40 +46,56 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!4 &4291505777615304
+--- !u!1 &1634326058628352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4984536113118082}
+  - component: {fileID: 114494901530788186}
+  m_Layer: 0
+  m_Name: lion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4336962853011776
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1640074652630352}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 0}
-  m_LocalScale: {x: 0.20433, y: 0.20433, z: 0.20433}
-  m_Children:
-  - {fileID: 4312379419846562}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4312379419846562
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1978639928421146}
+  m_GameObject: {fileID: 1291373278517848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.65, y: 3.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 224266053922886436}
-  m_Father: {fileID: 4291505777615304}
+  - {fileID: 224365418925506622}
+  m_Father: {fileID: 4984536113118082}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23094351923811732
+--- !u!4 &4984536113118082
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1634326058628352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children:
+  - {fileID: 4336962853011776}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23067150519358086
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1848634840060574}
+  m_GameObject: {fileID: 1111353611851954}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -125,49 +125,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33533633624263696
+--- !u!33 &33070730003192792
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1848634840060574}
+  m_GameObject: {fileID: 1111353611851954}
   m_Mesh: {fileID: 0}
---- !u!114 &114508224719264630
+--- !u!114 &114321386919197828
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1640074652630352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e098bdd07e94ac042aaffaa5116686fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  left: 5
-  right: -5
-  top: 5
-  down: -5
-  animalName: leo
-  animalType: lion
-  eatingType: 0
-  speed: 2
-  goal: {x: 0, y: 0, z: 0}
-  actions:
-  - {fileID: 11400000, guid: dfb494090d9b6094b960bf86c8b43181, type: 2}
-  tricks:
-  - {fileID: 11400000, guid: 61de87943beeab048b485be8f148af82, type: 2}
-  helloText: hello greetings from lion
-  thanksText: thanks boy
-  sprite: {fileID: 21300000, guid: 97de651b3407c744ca12bb3fbca15f1f, type: 3}
-  balloon: {fileID: 1978639928421146}
-  textObject: {fileID: 1848634840060574}
-  textMesh: {fileID: 114575854885648496}
---- !u!114 &114575854885648496
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1848634840060574}
+  m_GameObject: {fileID: 1111353611851954}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
@@ -264,7 +234,7 @@ MonoBehaviour:
   m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 23094351923811732}
+  m_renderer: {fileID: 23067150519358086}
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -275,12 +245,31 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   m_maskType: 0
---- !u!212 &212556043393190510
+--- !u!114 &114494901530788186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1634326058628352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e098bdd07e94ac042aaffaa5116686fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: 5
+  right: -5
+  top: 5
+  down: -5
+  sprite: {fileID: 21300000, guid: 97de651b3407c744ca12bb3fbca15f1f, type: 3}
+  balloon: {fileID: 1291373278517848}
+  textObject: {fileID: 1111353611851954}
+  animalInfo: {fileID: 11400000, guid: 77da4dc38f505d341bd6ce04db88b4f3, type: 2}
+--- !u!212 &212023711284397914
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1978639928421146}
+  m_GameObject: {fileID: 1291373278517848}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -321,24 +310,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!222 &222541599453747754
+--- !u!222 &222890462945959498
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1848634840060574}
+  m_GameObject: {fileID: 1111353611851954}
   m_CullTransparentMesh: 0
---- !u!224 &224266053922886436
+--- !u!224 &224365418925506622
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1848634840060574}
+  m_GameObject: {fileID: 1111353611851954}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4312379419846562}
+  m_Father: {fileID: 4336962853011776}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
