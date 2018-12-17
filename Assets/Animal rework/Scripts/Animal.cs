@@ -6,7 +6,7 @@ using TMPro;
 /// Baseclass for every Enemey
 /// </summary>
 public class Animal : MonoBehaviour {
-    
+
     //bounds for random walk
     #region bounds
     [HideInInspector]
@@ -29,7 +29,7 @@ public class Animal : MonoBehaviour {
     private SpriteRenderer sprRend;
     private bool doingTrick = false;
 
-    
+
     public ScriptableAnimal animalInfo;
 
     private void Start() {
@@ -46,8 +46,6 @@ public class Animal : MonoBehaviour {
         if (!doingTrick)
             DoAction();
         }
-
-
 
     public void DoAction() {
         if (animalInfo.actions.Length == 0) {
@@ -67,16 +65,19 @@ public class Animal : MonoBehaviour {
             }
         }
 
+    //set UI text to the right message
     public void FeedMe() {
         textMesh.SetText(animalInfo.thanksText);
         StartCoroutine(ActivateUI(balloon));
         }
 
+    //set ui text to the right message
     public void SayHello() {
         textMesh.SetText(animalInfo.helloText);
         StartCoroutine(ActivateUI(balloon));
         }
 
+    //sets ui active for a short period
     public IEnumerator ActivateUI(GameObject _UI) {
         _UI.SetActive(true);
         yield return new WaitForSeconds(1.0f);

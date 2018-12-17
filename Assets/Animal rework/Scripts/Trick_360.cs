@@ -8,11 +8,9 @@ using UnityEngine;
 public class Trick_360 : Trick {
 
     public override IEnumerator DoTrick(Animal _o) {
-        for (int i = 0; i < 360; i+=2) {
+        for (int i = 0; i < 360; i += 2) {
             _o.transform.localRotation = Quaternion.Euler(0, 0, -i);
             yield return new WaitForEndOfFrame();
             }
-        
         }
-
     }

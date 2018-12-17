@@ -6,6 +6,7 @@ using UnityEditor;
 public class AnimalTool : EditorWindow {
 
     //Animal settings
+
     private string animalName = "animal name";
     private string animalSpecies = "animal species";
     private string helloText, thankText;
@@ -79,7 +80,7 @@ public class AnimalTool : EditorWindow {
             //---------------------------------------------------------------------------Moves and tricks------------------------------------------------------//
             #region tricks and moves
             GUILayout.Label("Animal moves and tricks", EditorStyles.boldLabel);
-            
+
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label("Amount of Actions", GUILayout.Width(Screen.width / 4));
             amountOfActions = EditorGUILayout.IntField(amountOfActions, GUILayout.Width(Screen.width / 4));
@@ -147,15 +148,12 @@ public class AnimalTool : EditorWindow {
                 prefab = PrefabUtility.CreatePrefab(animalPrefabPath + "/" + _animalInfo.animalType + ".prefab", _animal);
                 PrefabUtility.ReplacePrefab(_animal, prefab, ReplacePrefabOptions.ConnectToPrefab);
                 EditorUtility.FocusProjectWindow();
-                Selection.activeObject = prefab;
                 }
             } else {
             prefab = PrefabUtility.CreatePrefab(animalPrefabPath + "/" + _animalInfo.animalType + ".prefab", _animal);
             PrefabUtility.ReplacePrefab(_animal, prefab, ReplacePrefabOptions.ConnectToPrefab);
             EditorUtility.FocusProjectWindow();
-            Selection.activeObject = prefab;
             }
         }
     }
 
-//string _path, string _name, string _animalSpecies, ScriptableAnimal.AnimalType _type, Trick[] _tricks

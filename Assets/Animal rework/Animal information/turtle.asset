@@ -9,16 +9,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 49877f299445b2a4eb963e92ac3fa33f, type: 3}
-  m_Name: tiger
+  m_Name: turtle
   m_EditorClassIdentifier: 
-  animalName: el tigre
-  animalType: tiger
-  eatingType: 0
-  spr: {fileID: 21300000, guid: d569ddefa4f7b4345825e1aae13af5a3, type: 3}
-  speed: 3
-  goal: {x: 4, y: 3, z: 0}
+  animalName: sheldon
+  animalType: turtle
+  eatingType: 2
+  spr: {fileID: 21300000, guid: 2026c8b0d4cec5546a0901e2ad177e8a, type: 3}
+  speed: 1
+  goal: {x: -3, y: -1, z: 0}
   actions:
   - {fileID: 11400000, guid: 72929711aa12e7c4fb926619fa5b94e6, type: 2}
-  tricks: []
-  helloText: hoi alles goed?
-  thanksText: thank so much
+  tricks:
+  - {fileID: 11400000, guid: c9add784ade31c54f92cb111b38e3c6e, type: 2}
+  helloText: '.....'
+  thanksText: '......'

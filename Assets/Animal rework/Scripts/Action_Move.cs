@@ -15,9 +15,19 @@ public class Action_Move : AnimalAction {
 
     public void Move(Animal _o) {
         Vector3 direction = _o.animalInfo.goal - _o.gameObject.transform.localPosition;
+        _o.GetComponent<SpriteRenderer>().flipX = RotateSprite(direction.x);
         _o.gameObject.transform.Translate(direction.normalized * _o.animalInfo.speed * Time.deltaTime);
+       
         if (direction.magnitude < 0.05)
             PickGoal(_o);
+        }
+
+    //check if animal is moving left or right
+    private bool RotateSprite(float _x) {
+        if (_x < 0) {
+            return false;
+            }
+        return true;
         }
 
     private void PickGoal(Animal _o) {
